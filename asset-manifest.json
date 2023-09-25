@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ClimaTransporte-Apis-React/static/css/main.073c9b0a.css",
+    "main.js": "/ClimaTransporte-Apis-React/static/js/main.cda8b33d.js",
+    "static/js/787.7f0deaa9.chunk.js": "/ClimaTransporte-Apis-React/static/js/787.7f0deaa9.chunk.js",
+    "static/media/logo.svg": "/ClimaTransporte-Apis-React/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/ClimaTransporte-Apis-React/index.html",
+    "main.073c9b0a.css.map": "/ClimaTransporte-Apis-React/static/css/main.073c9b0a.css.map",
+    "main.cda8b33d.js.map": "/ClimaTransporte-Apis-React/static/js/main.cda8b33d.js.map",
+    "787.7f0deaa9.chunk.js.map": "/ClimaTransporte-Apis-React/static/js/787.7f0deaa9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.cda8b33d.js"
+  ]
+}
