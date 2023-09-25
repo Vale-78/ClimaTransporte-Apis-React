@@ -1,24 +1,82 @@
-import logo from './logo.svg';
 import './App.css';
+import cielo from "./assets/cielo.jpeg";
+import transporte from "./assets/transporte.jpeg";
+import {AspectosDestacados} from "./componentes/AspectosDestacados";
+import {Hoy} from "./componentes/Hoy";
+import {MinMax} from "./componentes/MinMax";
+import {RelojClima} from "./componentes/RelojClima";
+const estilos = {
+  contenedorGeneral: {
+    // display: "flex",
+    // flexDirection: "row",
+    // justifyContent: "space-around",
+    display: "grid",
+    gridTemplateColumns: "repeat(2, 1fr)",
+    gridTemplateRows: "(100%, auto)",
+  },
+  fondoClima:{
+    backgroundImage: `url(${cielo})`,
+    backgroundRepeat: "no-repeat",
+    width:"100%",
+    height: "auto",
+    gridColumn: 1,
+    gridRow: 1,
+  },
+  title: {
+    fontFamily: "-apple-system",
+    color: "rgb(40 36 108)",
+    fontWeight: "bolder",
+    textAlign: "center",
+  },
+  fondoTransporte:{
+    backgroundImage: `url(${transporte})`,
+    backgroundRepeat: "no-repeat",
+    width:"100%",
+    height: "auto",
+    gridColumn: 2 ,
+    gridRow: 1,
+  },
+   
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <>
+      <header className="contenedorGeneral" style={estilos.contenedorGeneral}>
+         <section className='clima' style={estilos.fondoClima}>
+          <h1 style={estilos.title}>
+            Clima
+          </h1>
+          <RelojClima/>
+          <Hoy/>
+
+          <AspectosDestacados/>
+          <MinMax/>
+         </section>
+
+
+         <section className='transporte' style={estilos.fondoTransporte}>
+         <h1 style={estilos.title}>
+          Transporte
+        </h1>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Práximamente, info sobre transporte!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <p>
+          Práximamente, info sobre transporte!
+        </p>
+        <p>
+          Práximamente, info sobre transporte!
+        </p>
+        <p>
+          Práximamente, info sobre transporte!
+        </p>
+         </section>
+       
+      
+        
       </header>
-    </div>
+    </>
   );
 }
 
