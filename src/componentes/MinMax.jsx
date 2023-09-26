@@ -17,6 +17,9 @@ const estilos = {
     span: {
       fontSize:"xxx-large",
     },
+    span3: {
+      fontSize:"large",
+    },
   };
   
   function MinMax(){
@@ -27,11 +30,15 @@ const estilos = {
               <span style={estilos.span}>29°</span>
               <br></br>
               <span style={estilos.span}>🌤️</span>
+              <br></br>
+              <span style={estilos.span3}>Máxima</span>
             </div>  
             <div style={estilos.minMax}>
               <span style={estilos.span}>13°</span>
               <br></br>
               <span style={estilos.span}>🌛</span>
+              <br></br>
+              <span style={estilos.span3}>Mínima</span>
             </div>
          </div>)
   }

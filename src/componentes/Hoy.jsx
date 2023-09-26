@@ -1,11 +1,10 @@
 const estilos = {
     title: {
       fontFamily: "-apple-system",
-      color: "rgb(39 41 209)",
+      color: "rgb(40 36 108)",
       fontWeight: "bolder",
     },
-    minMax: {
-      
+    minMax: {    
       fontFamily: "-apple-system",
       color: "rgb(39 41 209)",
       padding: "1em 2em",
@@ -18,7 +17,7 @@ const estilos = {
     },
     span: {
       fontSize:"medium",
-      paddingLeft:"0.5rem"
+      paddingLeft:"0.6rem"
     },
     span2: {
       fontSize:"xx-large",
@@ -50,8 +49,8 @@ const estilos = {
               <span style={estilos.span}>12AM </span>
               <span style={estilos.span}>12AM </span>
               <span style={estilos.span}>12AM </span>
-              <span style={estilos.span}>12AM </span>
-              <span style={estilos.span}>12AM </span>
+              <span style={estilos.span}>12AM</span>
+              <span style={estilos.span}>12AM</span>
             </div>  
          </div>)
   }
