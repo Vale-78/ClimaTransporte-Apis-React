@@ -1,16 +1,19 @@
+import relojClima2 from "../assets/relojClima2.jpeg";
 const estilos = {
-    title: {
-      fontFamily: "-apple-system",
-      color: "rgb(135 65 193)",
-      padding: "18px 2em",
-      border: "solid 9px rgb(92 55 124)",
-      fontWeight: "bolder",
-    },
     container: {
       maxWidth: "950px",
       margin: "0 auto",
-      border: "1px solid #e6e6e6",
-      padding: "25px 25px",
+      textAlign: "center",
+    },
+    span: {
+      fontSize:"xx-large",
+      color: "rgb(39 41 209)",
+      fontWeight: "bolder",
+    },
+    span2: {
+      fontSize:"large",
+      color: "rgb(39 41 209)",
+      fontWeight: "bolder",
     },
      
   };
@@ -19,7 +22,13 @@ const estilos = {
     
     return (
         <div style={estilos.container}>
-            <h1 style={estilos.title}>RelojClima</h1>
+            <div >
+                <img src={relojClima2} alt="Reloj de clima"/>
+            </div>
+            <span style={estilos.span}>20°🌥️</span>
+            <br></br>
+            <span style={estilos.span2}>Miércoles 16:00 hs</span>
+            
          </div>)
   }
   export {RelojClima};

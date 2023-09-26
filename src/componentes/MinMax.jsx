@@ -1,25 +1,38 @@
 const estilos = {
-    title: {
+    minMax: {
       fontFamily: "-apple-system",
-      color: "rgb(135 65 193)",
+      color: "rgb(39 41 209)",
       padding: "18px 2em",
-      border: "solid 9px rgb(92 55 124)",
+      border: "solid 9px #35476c",
       fontWeight: "bolder",
     },
     container: {
+      display: "grid",
+      gridTemplateColumns: "auto auto ",
+      columnGap: "10px",
       maxWidth: "950px",
       margin: "0 auto",
-      border: "1px solid #e6e6e6",
       padding: "25px 25px",
     },
-     
+    span: {
+      fontSize:"xxx-large",
+    },
   };
   
   function MinMax(){
     
     return (
         <div style={estilos.container}>
-            <h1 style={estilos.title}>MínMax</h1>
+            <div style={estilos.minMax}>
+              <span style={estilos.span}>29°</span>
+              <br></br>
+              <span style={estilos.span}>🌤️</span>
+            </div>  
+            <div style={estilos.minMax}>
+              <span style={estilos.span}>13°</span>
+              <br></br>
+              <span style={estilos.span}>🌛</span>
+            </div>
          </div>)
   }
   export {MinMax};
