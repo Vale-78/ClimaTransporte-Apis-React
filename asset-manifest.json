@@ -1,17 +1,18 @@
 {
   "files": {
     "main.css": "/ClimaTransporte-Apis-React/static/css/main.073c9b0a.css",
-    "main.js": "/ClimaTransporte-Apis-React/static/js/main.5eb6eb39.js",
+    "main.js": "/ClimaTransporte-Apis-React/static/js/main.a0108c39.js",
     "static/js/787.7f0deaa9.chunk.js": "/ClimaTransporte-Apis-React/static/js/787.7f0deaa9.chunk.js",
-    "static/media/transporte.jpeg": "/ClimaTransporte-Apis-React/static/media/transporte.7cd271b304d48d04115a.jpeg",
-    "static/media/cielo.jpeg": "/ClimaTransporte-Apis-React/static/media/cielo.fbcba86a437f83f03cc2.jpeg",
+    "static/media/transporte2.jpg": "/ClimaTransporte-Apis-React/static/media/transporte2.4abc4748534cad3fa430.jpg",
+    "static/media/cielo3.jpg": "/ClimaTransporte-Apis-React/static/media/cielo3.253fe5b2a49b11febd1d.jpg",
+    "static/media/relojClima2.jpeg": "/ClimaTransporte-Apis-React/static/media/relojClima2.1238c16ba395c4bd54ed.jpeg",
     "index.html": "/ClimaTransporte-Apis-React/index.html",
     "main.073c9b0a.css.map": "/ClimaTransporte-Apis-React/static/css/main.073c9b0a.css.map",
-    "main.5eb6eb39.js.map": "/ClimaTransporte-Apis-React/static/js/main.5eb6eb39.js.map",
+    "main.a0108c39.js.map": "/ClimaTransporte-Apis-React/static/js/main.a0108c39.js.map",
     "787.7f0deaa9.chunk.js.map": "/ClimaTransporte-Apis-React/static/js/787.7f0deaa9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.5eb6eb39.js"
+    "static/js/main.a0108c39.js"
   ]
 }
