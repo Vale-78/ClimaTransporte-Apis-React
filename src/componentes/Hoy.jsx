@@ -1,8 +1,9 @@
 const estilos = {
     title: {
       fontFamily: "-apple-system",
-      color: "rgb(40 36 108)",
+      color: "#10113b",
       fontWeight: "bolder",
+      fontSize:"xx-large"
     },
     minMax: {    
       fontFamily: "-apple-system",

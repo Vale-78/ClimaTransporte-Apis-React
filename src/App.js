@@ -1,6 +1,6 @@
 import './App.css';
 import cielo3 from "./assets/cielo3.jpg";
-import transporte from "./assets/transporte.jpeg";
+import transporte2 from "./assets/transporte2.jpg";
 import {AspectosDestacados} from "./componentes/AspectosDestacados";
 import {Hoy} from "./componentes/Hoy";
 import {MinMax} from "./componentes/MinMax";
@@ -20,10 +20,19 @@ const estilos = {
   },
   title: {
     fontFamily: "-apple-system",
-    color: "rgb(40 36 108)",
+    color: "white",
     fontWeight: "bolder",
     textAlign: "center",
     fontSize:"xx-large",
+    border: "solid 2px black",
+    background:"#10113b"
+  },
+  p: {
+    fontFamily: "-apple-system",
+    color: "white",
+    fontWeight: "bolder",
+    textAlign: "center",
+    fontSize:"x-large",
   },
   climaContainer: {
     display: "flex",
@@ -39,7 +48,7 @@ const estilos = {
     flexDirection: "column",
   },
   fondoTransporte:{
-    backgroundImage: `url(${transporte})`,
+    backgroundImage: `url(${transporte2})`,
     backgroundRepeat: "no-repeat",
     width:"100%",
     height: "auto",
@@ -74,16 +83,16 @@ function App() {
          <h1 style={estilos.title}>
           TRANSPORTE
         </h1>
-        <p>
+        <p style={estilos.p}>
           Práximamente, info sobre transporte!
         </p>
-        <p>
+        <p style={estilos.p}>
           Práximamente, info sobre transporte!
         </p>
-        <p>
+        <p style={estilos.p}>
           Práximamente, info sobre transporte!
         </p>
-        <p>
+        <p style={estilos.p}>
           Práximamente, info sobre transporte!
         </p>
          </section>
