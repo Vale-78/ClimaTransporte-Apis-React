@@ -3,7 +3,8 @@ const estilos = {
       fontFamily: "-apple-system",
       color: "#10113b",
       fontWeight: "bolder",
-      fontSize:"xx-large"
+      fontSize:"xx-large",
+      textAlign: "center",
     },
     minMax: {    
       fontFamily: "-apple-system",
@@ -31,7 +32,7 @@ const estilos = {
     
     return (
         <div style={estilos.container}>
-            <h1 style={estilos.title}>Hoy</h1>
+            <h1 style={estilos.title}>Pronóstico de hoy</h1>
             <div style={estilos.minMax}>
              <span style={estilos.span2}>▮</span>
              <span style={estilos.span2}>▮</span>
