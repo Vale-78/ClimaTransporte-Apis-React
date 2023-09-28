@@ -1,3 +1,4 @@
+import {GraficoBarSimple} from "./GraficoBarSimple"
 const estilos = {
     title: {
       fontFamily: "-apple-system",
@@ -6,54 +7,18 @@ const estilos = {
       fontSize:"xx-large",
       textAlign: "center",
     },
-    minMax: {    
-      fontFamily: "-apple-system",
-      color: "rgb(39 41 209)",
-      padding: "1em 2em",
-      border: "solid 9px #35476c",
-      fontWeight: "bolder",
-    },
+ 
     container: {
-      margin: "0 auto",
-      padding: "25px 25px",
-    },
-    span: {
-      fontSize:"medium",
-      paddingLeft:"0.6rem"
-    },
-    span2: {
-      fontSize:"xx-large",
-      paddingLeft:"1.5rem"
-    },
-     
+      margin: "0",
+    },     
   };
   
   function Hoy(){
     
     return (
         <div style={estilos.container}>
-            <h1 style={estilos.title}>Pronóstico de hoy</h1>
-            <div style={estilos.minMax}>
-             <span style={estilos.span2}>▮</span>
-             <span style={estilos.span2}>▮</span>
-             <span style={estilos.span2}>▮</span>
-             <span style={estilos.span2}>▮</span>
-             <span style={estilos.span2}>▮</span>
-             <span style={estilos.span2}>▮</span>
-             <span style={estilos.span2}>▮</span>
-             <span style={estilos.span2}>▮</span>
-             <span style={estilos.span2}>▮</span>
-              <br></br>
-              <span style={estilos.span}>12AM </span>
-              <span style={estilos.span}>12AM </span>
-              <span style={estilos.span}>12AM </span>
-              <span style={estilos.span}>12AM </span>
-              <span style={estilos.span}>12AM </span>
-              <span style={estilos.span}>12AM </span>
-              <span style={estilos.span}>12AM </span>
-              <span style={estilos.span}>12AM</span>
-              <span style={estilos.span}>12AM</span>
-            </div>  
+            <h1 style={estilos.title}>Pronóstico de hoy</h1> 
+            <GraficoBarSimple/>
          </div>)
   }
   export {Hoy};

@@ -1,4 +1,5 @@
-
+import * as React from 'react';
+import CircularProgress from '@mui/material/CircularProgress';
 const estilos = { 
   grilla: {
     backgroundColor: "rgba(255, 255, 255, 0.8)",
@@ -33,8 +34,10 @@ function IndiceUV() {
         <span style={estilos.span2}>Índice UV</span>
               <br></br>
               <br></br>
+              
               <span style={estilos.span}>⛱️  </span>
               <span style={estilos.span}>6</span>
+              <CircularProgress variant="determinate" value={25} />
         </div>
   );
 }

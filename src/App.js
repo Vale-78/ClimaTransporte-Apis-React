@@ -5,11 +5,11 @@ import {AspectosDestacados} from "./componentes/AspectosDestacados";
 import {Hoy} from "./componentes/Hoy";
 import {MinMax} from "./componentes/MinMax";
 import {RelojClima} from "./componentes/RelojClima";
+import {ProgresPrueba} from "./componentes/ProgresPrueba"
 const estilos = {
   contenedorGeneral: {
     display: "grid",
-    gridTemplateColumns: "auto auto ",
-    columnGap: "10px",
+    gridTemplateColumns: "1fr 1fr ",
   },
   fondoClima:{
     backgroundImage: `url(${cielo3})`,
@@ -37,6 +37,7 @@ const estilos = {
   climaContainer: {
     display: "flex",
     justifyContent: "flex-start",
+    paddingRight:"3px"
   },
   climaLeft: {
     display: "flex",
@@ -83,6 +84,7 @@ function App() {
          <h1 style={estilos.title}>
           TRANSPORTE
         </h1>
+        <ProgresPrueba/>
         <p style={estilos.p}>
           Práximamente, info sobre transporte!
         </p>

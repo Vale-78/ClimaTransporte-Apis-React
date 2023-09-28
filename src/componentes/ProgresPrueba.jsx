@@ -1,4 +1,8 @@
-
+import Button from '@mui/material/Button';
+import {CircularDeterminate }from "./CircularDeterminate";
+import {CircularWithValueLabel} from "./CircularProgressWithLabel";
+// import {GraficoBarras} from "./GraficoBarras";
+// import {GraficoBarBasic} from "./GraficoBarBasic";
 const estilos = {
     grilla: {
       backgroundColor: "rgba(255, 255, 255, 0.8)",
@@ -21,19 +25,24 @@ const estilos = {
     },
   };
   
-  function Visibilidad() {
+  function ProgresPrueba() {
     return (
         <div class="grid-item" style={estilos.grilla}>
-       {/* <CircularProgress variant="determinate" value={25} />
-<CircularProgress variant="determinate" value={50} />
-<CircularProgress variant="determinate" value={75} />
-<CircularProgress variant="determinate" value={100} />
-<CircularProgress variant="determinate" value={progress} /> */}
-{/* 
-<CircularProgressWithLabel value={progress} /> */} 
+         <p>
+          Prueba de MUI!
+        </p>
+        <Button variant="contained">Hello world</Button>;
+        <CircularDeterminate/>
+        <br></br>
+        <CircularWithValueLabel/>
+        <br></br>
+        {/* <GraficoBarras/> */}
+        {/* <GraficoBarBasic/> */}
+
+{/* <CircularProgressWithLabel value={progress} />  */}
 {/* circulo hasta 100% */}
         </div>
     );
   }
-  export { Visibilidad };
+  export { ProgresPrueba };
   
