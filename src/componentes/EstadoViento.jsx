@@ -27,7 +27,7 @@ const estilos = {
   
   function EstadoViento() {
     return (
-          <div class="grid-item" style={estilos.grilla}>
+          <div className="grid-item" style={estilos.grilla}>
            <br></br>
           <span style={estilos.span2}>Estado del viento</span>
                 <br></br>

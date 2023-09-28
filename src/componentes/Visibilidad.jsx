@@ -22,7 +22,7 @@ const estilos = {
   
   function Visibilidad() {
     return (
-        <div class="grid-item" style={estilos.grilla}>
+        <div className="grid-item" style={estilos.grilla}>
         <br></br>
         <span style={estilos.span2}>Visibilidad</span>
         <br></br>

@@ -13,7 +13,9 @@ function CircularDeterminate() {
     return () => {
       clearInterval(timer);
     };
+    
   }, []);
+  
 
   return (
     <Stack spacing={2} direction="row">

@@ -1,6 +1,7 @@
 import Button from '@mui/material/Button';
 import {CircularDeterminate }from "./CircularDeterminate";
 import {CircularWithValueLabel} from "./CircularProgressWithLabel";
+import {CircularDetConNumeros} from "./CircularDetConNumeros";
 // import {GraficoBarras} from "./GraficoBarras";
 // import {GraficoBarBasic} from "./GraficoBarBasic";
 const estilos = {
@@ -27,7 +28,7 @@ const estilos = {
   
   function ProgresPrueba() {
     return (
-        <div class="grid-item" style={estilos.grilla}>
+        <div className="grid-item" style={estilos.grilla}>
          <p>
           Prueba de MUI!
         </p>
@@ -38,6 +39,7 @@ const estilos = {
         <br></br>
         {/* <GraficoBarras/> */}
         {/* <GraficoBarBasic/> */}
+       <CircularDetConNumeros/>
 
 {/* <CircularProgressWithLabel value={progress} />  */}
 {/* circulo hasta 100% */}

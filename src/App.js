@@ -7,18 +7,22 @@ import {MinMax} from "./componentes/MinMax";
 import {RelojClima} from "./componentes/RelojClima";
 import {ProgresPrueba} from "./componentes/ProgresPrueba"
 const estilos = {
+  header: {
+    display: "flex",
+  },
   contenedorGeneral: {
     display: "grid",
-    gridTemplateColumns: "1fr 1fr ",
+    gridTemplateColumns: "auto auto",
   },
   fondoClima:{
     backgroundImage: `url(${cielo3})`,
     backgroundRepeat: "no-repeat",
-    width:"100%",
-    height: "auto",
+    gridColumnstart: "1",
+    gridColumnEnd: "2",
+   
     
   },
-  title: {
+  titleClima: {
     fontFamily: "-apple-system",
     color: "white",
     fontWeight: "bolder",
@@ -26,6 +30,15 @@ const estilos = {
     fontSize:"xx-large",
     border: "solid 2px black",
     background:"#10113b"
+  },
+  titleTransporte: {
+    fontFamily: "-apple-system",
+    color: "#10113b",
+    fontWeight: "bolder",
+    textAlign: "center",
+    fontSize:"xx-large",
+    border: "solid 2px black",
+    background:"white"
   },
   p: {
     fontFamily: "-apple-system",
@@ -42,7 +55,7 @@ const estilos = {
   climaLeft: {
     display: "flex",
     flexDirection: "column",
-    justifyContent: "space-around",
+    justifyContent: "space-evenly",
   },
   climaRight: {
     display: "flex",
@@ -51,8 +64,10 @@ const estilos = {
   fondoTransporte:{
     backgroundImage: `url(${transporte2})`,
     backgroundRepeat: "no-repeat",
-    width:"100%",
-    height: "auto",
+    gridColumnstart: "2",
+    gridColumnEnd: "3",
+
+
     
   },
    
@@ -60,9 +75,10 @@ const estilos = {
 
 function App() {
   return (
-      <header className="contenedorGeneral" style={estilos.contenedorGeneral}>
+      <header className="contenedorGeneral" style={estilos.header}>
+      <div style={estilos.contenedorGeneral}>
          <section className='clima' style={estilos.fondoClima}>
-          <h1 style={estilos.title}>
+          <h1 style={estilos.titleClima}>
             CLIMA
           </h1>
           <div className='climaContainer' style={estilos.climaContainer}>
@@ -81,26 +97,24 @@ function App() {
 
 
          <section className='transporte' style={estilos.fondoTransporte}>
-         <h1 style={estilos.title}>
+         <h1 style={estilos.titleTransporte}>
           TRANSPORTE
         </h1>
+        <p style={estilos.p}>
+          Práximamente, info sobre transporte!
+        </p>
+        <p style={estilos.p}>
+          Práximamente, info sobre transporte!
+        </p>
+        <p style={estilos.p}>
+          Práximamente, info sobre transporte!
+        </p>
+        <p style={estilos.p}>
+          Práximamente, info sobre transporte! Práximamente, info sobre transporte!
+        </p>
         <ProgresPrueba/>
-        <p style={estilos.p}>
-          Práximamente, info sobre transporte!
-        </p>
-        <p style={estilos.p}>
-          Práximamente, info sobre transporte!
-        </p>
-        <p style={estilos.p}>
-          Práximamente, info sobre transporte!
-        </p>
-        <p style={estilos.p}>
-          Práximamente, info sobre transporte!
-        </p>
          </section>
-       
-      
-        
+        </div>
       </header>
   );
 }

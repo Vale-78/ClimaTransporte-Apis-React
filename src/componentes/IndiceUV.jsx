@@ -1,6 +1,8 @@
-import * as React from 'react';
-import CircularProgress from '@mui/material/CircularProgress';
-const estilos = { 
+import * as React from "react";
+// import CircularProgress from '@mui/material/CircularProgress';
+import { CircularDetConNumeros } from "./CircularDetConNumeros";
+
+const estilos = {
   grilla: {
     backgroundColor: "rgba(255, 255, 255, 0.8)",
     border: "5px solid #10113b",
@@ -8,20 +10,20 @@ const estilos = {
     textAlign: "center",
   },
   span: {
-    fontSize:"x-large",
+    fontSize: "xx-large",
     color: "rgb(39 41 209)",
     fontWeight: "bolder",
   },
   span2: {
-    fontSize:"large",
+    fontSize: "large",
     fontWeight: "bolder",
   },
   span3: {
-    fontSize:"large",
+    fontSize: "large",
     fontWeight: "bolder",
   },
   span4: {
-    fontSize:"large",
+    fontSize: "large",
     fontWeight: "bolder",
     color: "rgb(39 41 209)",
   },
@@ -29,16 +31,16 @@ const estilos = {
 
 function IndiceUV() {
   return (
-        <div class="grid-item" style={estilos.grilla}>
-        <br></br>
-        <span style={estilos.span2}>Índice UV</span>
-              <br></br>
-              <br></br>
-              
-              <span style={estilos.span}>⛱️  </span>
-              <span style={estilos.span}>6</span>
-              <CircularProgress variant="determinate" value={25} />
-        </div>
+    <div className="grid-item" style={estilos.grilla}>
+      <br></br>
+      <span style={estilos.span2}>Índice UV</span>
+      <br></br>
+      <br></br>
+
+      <span style={estilos.span}>⛱️ </span>
+      {/* <CircularProgress variant="determinate" value={25} /> */}
+      <CircularDetConNumeros />
+    </div>
   );
 }
 export { IndiceUV };
