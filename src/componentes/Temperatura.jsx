@@ -28,9 +28,9 @@ function CircularProgressWithLabel(props) {
           size: "100",
         }}
       >
-        <Typography variant="h5" component="h1" fontWeight="bolder">
-          {`${Math.round(props.value)}°`}
-          {/* si quisiera porcentaje, lo pongo luego de {} */}
+        <Typography variant="h6" component="h1" fontWeight="bolder">
+          {props.value+"°"}
+          {/* si quisiera porcentaje, lo pongo luego de {}% */}
         </Typography>
       </Box>
     </Box>
@@ -46,11 +46,9 @@ CircularProgressWithLabel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-function Temperatura() {
-  const [progress, setProgress] = React.useState(20);
-
+function Temperatura({tempActual, setTempActual}) {
   return (
-    <CircularProgressWithLabel value={progress} />
+    <CircularProgressWithLabel value={tempActual} />
   );
 }
 export { Temperatura };

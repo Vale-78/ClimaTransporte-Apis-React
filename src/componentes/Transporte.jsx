@@ -1,6 +1,13 @@
 import { ProgresPrueba } from "./ProgresPrueba";
 import transporte2 from "../assets/transporte2.jpg";
 const estilos = { 
+    fondoTransporte:{
+        backgroundImage: `url(${transporte2})`,
+        backgroundRepeat: "no-repeat",
+        minWidth:"100%,",
+        display:"flex",
+        flexDirection: "column"
+      }, 
     titleTransporte: {
       fontFamily: "-apple-system",
       color: "#10113b",
@@ -8,7 +15,7 @@ const estilos = {
       textAlign: "center",
       fontSize:"xx-large",
       border: "solid 2px black",
-      background:"white"
+      background:"white",
     },
     p: {
       fontFamily: "-apple-system",
@@ -17,13 +24,6 @@ const estilos = {
       textAlign: "center",
       fontSize:"x-large",
     },
-  
-    fondoTransporte:{
-      backgroundImage: `url(${transporte2})`,
-      backgroundRepeat: "no-repeat",
-      gridColumnstart: "2",
-      gridColumnEnd: "3", 
-    }, 
   };
 
 function Transporte() {

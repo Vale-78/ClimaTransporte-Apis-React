@@ -4,37 +4,12 @@ import { Transporte } from './componentes/Transporte';
 const estilos = {
   header: {
     display: "flex",
+    justifyContent: "space-evenly",
   },
   contenedorGeneral: {
-    display: "grid",
-    gridTemplateColumns: "auto auto",
-  },
-
-  titleTransporte: {
-    fontFamily: "-apple-system",
-    color: "#10113b",
-    fontWeight: "bolder",
-    textAlign: "center",
-    fontSize:"xx-large",
-    border: "solid 2px black",
-    background:"white"
-  },
-  p: {
-    fontFamily: "-apple-system",
-    color: "white",
-    fontWeight: "bolder",
-    textAlign: "center",
-    fontSize:"x-large",
-  },
-  climaContainer: {
     display: "flex",
-    justifyContent: "flex-start",
-    paddingRight:"3px"
   },
-
-
 };
-
 function App() {
   return (
       <header className="contenedorGeneral" style={estilos.header}>

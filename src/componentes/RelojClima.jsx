@@ -18,18 +18,18 @@ const estilos = {
   },
 };
 
-function RelojClima() {
+function RelojClima({tempActual, setTempActual, fecha, setFecha}) {
   return (
     <div style={estilos.container}>
       <div>
         <img src={relojClima2} alt="Reloj de clima" />
       </div>
       <br></br>
-      <Temperatura />
+      <Temperatura tempActual={tempActual} setTempActual={setTempActual}/>
       <br></br>
       <span style={estilos.span}>🌥️</span>
       <br></br>
-      <span style={estilos.span2}>Miércoles 16:00 hs</span>
+      <span style={estilos.span2}>{fecha}</span>
     </div>
   );
 }

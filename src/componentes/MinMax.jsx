@@ -22,19 +22,19 @@ const estilos = {
     },
   };
   
-  function MinMax(){
+  function MinMax({tempMinMax, setTempMinMax}){
     
     return (
         <div style={estilos.container}>
             <div style={estilos.minMax}>
-              <span style={estilos.span}>29°</span>
+              <span style={estilos.span}>{tempMinMax.max}</span>
               <br></br>
               <span style={estilos.span}>🌤️</span>
               <br></br>
               <span style={estilos.span3}>Máxima</span>
             </div>  
             <div style={estilos.minMax}>
-              <span style={estilos.span}>13°</span>
+              <span style={estilos.span}>{tempMinMax.min}</span>
               <br></br>
               <span style={estilos.span}>🌛</span>
               <br></br>
