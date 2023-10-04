@@ -3,11 +3,12 @@ import {Clima} from "./componentes/Clima";
 import { Transporte } from './componentes/Transporte';
 const estilos = {
   header: {
-    display: "flex",
     justifyContent: "space-evenly",
   },
   contenedorGeneral: {
-    display: "flex",
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
+    gap:"10px"
   },
 };
 function App() {
@@ -22,3 +23,7 @@ function App() {
 }
 
 export default App;
+
+// https://www.youtube.com/watch?v=mDnd5rCDk6s
+// Video íconos
+// https://bas.dev/work/meteocons página Íconos
