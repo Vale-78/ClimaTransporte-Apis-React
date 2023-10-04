@@ -17,24 +17,30 @@ const estilos = {
     display: "grid",
     columnGap: "5px",
     rowGap: "10px",
-    gridTemplateColumns: "auto auto auto",
+    gridTemplateColumns: "1fr 1fr 1fr",
     marginLeft: "5%",
     marginRight: "5%",
     maxWidth: "90%",
   },
 };
 
-function AspectosDestacados() {
+function AspectosDestacados({uv, setUv , windStatus, setWindStatus,
+  salidaYPuestaSol, setSalidaYPuestaSol,humedad, setHumedad,
+visibilidad, setVisibilidad, calidadDelAire, setCalidadDelAire}) {
   return (
     <div>
       <h1 style={estilos.title}>AspectosDestacados</h1>
       <div style={estilos.container}>
-        <EstadoViento />
-        <IndiceUV />
-        <SalidaPuestaSol />
-        <Humedad />
-        <Visibilidad />
-        <CalidadAire />
+
+      
+       
+    
+        <EstadoViento  windStatus={windStatus} setWindStatus={setWindStatus} />
+        <IndiceUV uv={uv} setUv ={setUv} />
+        <SalidaPuestaSol salidaPuestaSol={salidaYPuestaSol} setSalidaPuestaSol={setSalidaYPuestaSol} />
+        <Humedad humedad={humedad} setHumedad={setHumedad}/>
+        <Visibilidad visibilidad={visibilidad} setVisibilidad={setVisibilidad} />
+        <CalidadAire calidadDelAire={calidadDelAire} setCalidadDelAire={setCalidadDelAire}/>
       </div>
     </div>
   );

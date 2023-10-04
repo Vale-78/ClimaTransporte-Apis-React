@@ -20,7 +20,7 @@ const estilos = {
   },
 };
 
-function Humedad() {
+function Humedad({humedad, setHumedad} ) {
   return (
     <div className="grid-item" style={estilos.grilla}>
     <br></br>
@@ -28,7 +28,7 @@ function Humedad() {
       <br></br>
       <br></br>
       <span style={estilos.span}>⛈️</span>
-      <span style={estilos.span}>11.12 Km/h</span>
+      <span style={estilos.span}>{humedad} %</span>
       <br></br>
       <br></br>
       <span style={estilos.span3}>Normal</span>

@@ -48,7 +48,30 @@ function Clima() {
   const [tempMinMax, setTempMinMax] = useState({min:JsonData["daily"]["temperature_2m_min"],max:JsonData["daily"]["temperature_2m_max"]});
   console.log(tempActual);
   console.log(setTempActual);
-  return (
+
+  const [grafTempXHora, setGrafTempXHora] = useState(
+    JsonData["hourly"]["temperature_2m"].filter((value,index)=>index in [0,3,6,9,12,15,18, 21]));
+    console.log(grafTempXHora);
+
+    const [uv, setUv] = useState(
+      JsonData["daily"]["uv_index_max"]
+    );
+    const [windStatus, setWindStatus] = useState(
+      JsonData["daily"]["windspeed_10m_max"]
+    );
+    const [salidaYPuestaSol, setSalidaYPuestaSol] = useState({min:JsonData["daily"]["temperature_2m_min"],max:JsonData["daily"]["temperature_2m_max"]});
+ 
+    const [humedad, setHumedad] = useState(
+      JsonData["hourly"]["relativehumidity_2m"]["11"]
+    );
+
+    const [visibilidad, setVisibilidad] = useState(
+      JsonData["hourly"]["visibility"]["11"]
+    );
+    const [calidadDelAire, setCalidadDelAire] = useState(
+      JsonData["current_weather"]["weathercode"]
+    ); 
+   return (
     <section className="clima" style={estilos.fondoClima}>
       <h1 style={estilos.titleClima}>CLIMA</h1>
       <div className="climaContainer" style={estilos.climaContainer}>
@@ -62,8 +85,11 @@ function Clima() {
           <MinMax tempMinMax={tempMinMax} setTempMinMax={setTempMinMax} />
         </div>
         <div className="climaRight" style={estilos.climaRight}>
-          <Hoy />
-          <AspectosDestacados />
+          <Hoy grafTempXHora={grafTempXHora} setGrafTempXHora={setGrafTempXHora} />
+          
+          <AspectosDestacados uv={uv} setUv ={setUv} windStatus={windStatus} setWindStatus={setWindStatus} 
+      salidaPuestaSol={salidaYPuestaSol} setSalidaPuestaSol={setSalidaYPuestaSol} humedad={humedad} setHumedad={setHumedad} 
+    visibilidad={visibilidad} setVisibilidad={setVisibilidad} calidadDelAire={calidadDelAire} setCalidadDelAire={setCalidadDelAire}/>
         </div>
       </div>
     </section>

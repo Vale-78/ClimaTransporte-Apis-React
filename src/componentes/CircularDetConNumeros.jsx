@@ -46,11 +46,10 @@ CircularProgressWithLabel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-function CircularDetConNumeros() {
-  const [progress, setProgress] = React.useState(12);
+function CircularDetConNumeros({uv, setUv}) {
 
   return (
-    <CircularProgressWithLabel value={progress} />
+    <CircularProgressWithLabel value={uv} />
   );
 }
 export { CircularDetConNumeros };

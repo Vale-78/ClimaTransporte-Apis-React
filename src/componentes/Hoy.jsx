@@ -13,12 +13,12 @@ const estilos = {
     },     
   };
   
-  function Hoy(){
+  function Hoy({grafTempXHora, setGrafTempXHora}){
     
     return (
         <div style={estilos.container}>
             <h1 style={estilos.title}>Pronóstico de hoy</h1> 
-            <GraficoBarSimple/>
+            <GraficoBarSimple grafTempXHora={grafTempXHora} setGrafTempXHora={setGrafTempXHora}/>
          </div>)
   }
   export {Hoy};

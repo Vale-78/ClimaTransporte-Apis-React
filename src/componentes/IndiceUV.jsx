@@ -29,7 +29,7 @@ const estilos = {
   },
 };
 
-function IndiceUV() {
+function IndiceUV({uv, setUv}) {
   return (
     <div className="grid-item" style={estilos.grilla}>
       <br></br>
@@ -39,7 +39,7 @@ function IndiceUV() {
 
       <span style={estilos.span}>⛱️ </span>
       {/* <CircularProgress variant="determinate" value={25} /> */}
-      <CircularDetConNumeros />
+      <CircularDetConNumeros uv={uv} setUv={setUv} />
     </div>
   );
 }

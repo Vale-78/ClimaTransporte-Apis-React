@@ -20,7 +20,7 @@ const estilos = {
     },
   };
   
-  function Visibilidad() {
+  function Visibilidad({visibilidad, setVisibilidad}) {
     return (
         <div className="grid-item" style={estilos.grilla}>
         <br></br>
@@ -28,7 +28,7 @@ const estilos = {
         <br></br>
               <br></br>
               <span style={estilos.span}>👁️‍🗨️</span>
-              <span style={estilos.span}>11.12 Km/h</span>
+              <span style={estilos.span}>{visibilidad} m</span>
               <br></br>
               <br></br>
               <span style={estilos.span3}>Promedio</span>

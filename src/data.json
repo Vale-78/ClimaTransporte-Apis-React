@@ -1,24 +1,24 @@
 {
     "latitude": -31.375,
     "longitude": -64.125,
-    "generationtime_ms": 0.10597705841064453,
+    "generationtime_ms": 0.1169443130493164,
     "utc_offset_seconds": -10800,
     "timezone": "America/Sao_Paulo",
     "timezone_abbreviation": "-03",
     "elevation": 397.0,
     "current_weather": {
-        "temperature": 22.3,
-        "windspeed": 18.1,
-        "winddirection": 59,
-        "weathercode": 2,
+        "temperature": 22.6,
+        "windspeed": 17.4,
+        "winddirection": 60,
+        "weathercode": 1,
         "is_day": 1,
-        "time": "Sábado/ 2023-09-30 /14:30"
+        "time": "2023-09-30T17:00"
     },
     "hourly_units": {
         "time": "iso8601",
         "temperature_2m": "°C",
         "relativehumidity_2m": "%",
-        "weathercode": "wmo code"
+        "visibility": "m"
     },
     "hourly": {
         "time": [
@@ -99,44 +99,49 @@
             46,
             46
         ],
-        "weathercode": [
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            2,
-            1,
-            1,
-            2,
-            1,
-            0,
-            0,
-            0,
-            0
+        "visibility": [
+            24140.00,
+            24140.00,
+            24140.00,
+            24140.00,
+            24140.00,
+            24140.00,
+            24140.00,
+            24140.00,
+            24140.00,
+            24140.00,
+            24140.00,
+            24140.00,
+            24140.00,
+            24140.00,
+            24140.00,
+            24140.00,
+            24140.00,
+            24140.00,
+            24140.00,
+            24140.00,
+            24140.00,
+            24140.00,
+            24140.00,
+            24140.00
         ]
     },
     "daily_units": {
         "time": "iso8601",
+        "weathercode": "wmo code",
         "temperature_2m_max": "°C",
         "temperature_2m_min": "°C",
         "sunrise": "iso8601",
         "sunset": "iso8601",
-        "uv_index_max": ""
+        "uv_index_max": "",
+        "windspeed_10m_max": "km/h"
     },
     "daily": {
         "time": [
             "2023-09-30"
+        ],
+        "weathercode": [
+            2
         ],
         "temperature_2m_max": [
             22.9
@@ -152,7 +157,9 @@
         ],
         "uv_index_max": [
             7.60
+        ],
+        "windspeed_10m_max": [
+            18.4
         ]
     }
 }
-

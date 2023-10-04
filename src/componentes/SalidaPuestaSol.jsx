@@ -18,7 +18,7 @@ const estilos = {
   },
 };
 
-function SalidaPuestaSol() {
+function SalidaPuestaSol({salidaYPuestaSol, setSalidaYPuestaSol}) {
   return (
      
       
