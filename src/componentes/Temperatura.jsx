@@ -10,11 +10,11 @@ import "@fontsource/roboto/700.css";
 
 function CircularProgressWithLabel(props) {
   return (
-    <Box sx={{ position: "relative", display: "inline-flex" }}>
+    <Box sx={{ position: "relative", display: "inline-flex", size:"120%"}}>
       <CircularProgress variant="determinate" {...props} />
       <Box
         sx={{
-          top: 0,
+          top: 20,
           left: 0,
           bottom: 0,
           right: 0,
@@ -25,10 +25,10 @@ function CircularProgressWithLabel(props) {
           fontSize: "x-large",
           color: "rgb(39 41 209)",
           fontWeight: "bolder",
-          size: "100",
+          fontFamily: "emoji",
         }}
       >
-        <Typography variant="h6" component="h1" fontWeight="bolder">
+        <Typography variant="h4" component="h1" fontWeight="bolder">
           {props.value+"°"}
           {/* si quisiera porcentaje, lo pongo luego de {}% */}
         </Typography>

@@ -11,14 +11,17 @@ const estilos = {
       fontSize: "x-large",
       color: "rgb(39 41 209)",
       fontWeight: "bolder",
+      fontFamily: "emoji",
     },
     span2: {
       fontSize: "large",
       fontWeight: "bolder",
+      fontFamily: "emoji",
     },
     span3: {
       fontSize: "medium",
       fontWeight: "bolder",
+      fontFamily: "emoji",
     },
     img: {
         width: "35%",
@@ -27,10 +30,7 @@ const estilos = {
       },
   };
 
-  function CalidadAire({calidadDelAire, setCalidadDelAire}) {
-    // const [icons, setIcons]= useState("");
-
-    // setIcons=(data.weatherCodeInfo[calidadDelAire].image_src);
+  function CalidadAire({calidadDelAire}) {
     const weatherCodeInfo = {
     0 : {
         "name": "despejado",
