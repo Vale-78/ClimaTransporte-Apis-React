@@ -10,7 +10,7 @@ import "@fontsource/roboto/700.css";
 
 function CircularProgressWithLabel(props) {
   return (
-    <Box sx={{ position: "relative", display: "inline-flex", size:"120%"}}>
+    <Box sx={{ position: "relative",     marginBottom: "-23px"}}>
       <CircularProgress variant="determinate" {...props} />
       <Box
         sx={{

@@ -12,7 +12,7 @@ const estilos = {
       columnGap: "10px",
       maxWidth: "950px",
       margin: "0 auto",
-      padding: "25px 25px",
+      padding: "5px",
     },
     span: {
       fontSize:"xxx-large",

@@ -4,12 +4,6 @@ const estilos = {
   container: {
     textAlign: "center",
   },
-  span: {
-    fontSize: "xx-large",
-    color: "rgb(39 41 209)",
-    fontWeight: "bolder",
-    fontFamily: "emoji",
-  },
   span2: {
     fontSize: "x-large",
     fontWeight: "bolder",
@@ -155,13 +149,11 @@ function RelojClima({calidadDelAire,tempActual, setTempActual, fecha, setFecha})
       <span style={estilos.span2}>{fecha}</span>
       <br></br>
       <br></br>
-      <div style={estilos.imgContainer}>
-      <Temperatura tempActual={tempActual} setTempActual={setTempActual}/>
-      </div>
+      <Temperatura style={estilos.imgContainer} tempActual={tempActual} setTempActual={setTempActual}/>
       <br></br>
       <img style={estilos.img} src={weatherCodeInfo[calidadDelAire].image_src} alt="Imagen "></img>
       <br></br>
-      <span style={estilos.span3}>Estado del tiempo: {weatherCodeInfo[calidadDelAire].name}</span>
+      <span style={estilos.span3}> Estado del tiempo: {weatherCodeInfo[calidadDelAire].name}</span>
      
     </div>
   );

@@ -20,10 +20,10 @@ const estilos = {
   },
 };
 
-function Humedad({humedad, setHumedad} ) {
+function Humedad({ humedad }) {
   return (
     <div className="grid-item" style={estilos.grilla}>
-    <br></br>
+      <br></br>
       <span style={estilos.span2}>Humedad</span>
       <br></br>
       <br></br>

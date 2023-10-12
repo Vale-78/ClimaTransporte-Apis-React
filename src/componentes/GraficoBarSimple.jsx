@@ -14,7 +14,7 @@ const estilos = {
   },
 };
 
-function GraficoBarSimple({grafTempXHora, setGrafTempXHora}) {
+function GraficoBarSimple({ grafTempXHora }) {
   return (
     <div style={estilos.minMax}>
       <BarChart
@@ -29,7 +29,7 @@ function GraficoBarSimple({grafTempXHora, setGrafTempXHora}) {
         series={[
           {
             data: grafTempXHora,
-            color: "#298482"
+            color: "#298482",
           },
         ]}
         width={450}

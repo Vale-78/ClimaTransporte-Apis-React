@@ -2,25 +2,8 @@ import { AspectosDestacados } from "../componentes/AspectosDestacados";
 import { Hoy } from "../componentes/Hoy";
 import { MinMax } from "../componentes/MinMax";
 import { RelojClima } from "../componentes/RelojClima";
-import cielo3 from "../assets/cielo3.jpg";
 import { useState } from "react";
 const estilos = {
-  fondoClima: {
-    backgroundImage: `url(${cielo3})`,
-    backgroundRepeat: "no-repeat",
-    maxWidth: "100%",
-    display: "flex",
-    flexDirection: "column",
-  },
-  titleClima: {
-    fontFamily: "-apple-system",
-    color: "white",
-    fontWeight: "bolder",
-    textAlign: "center",
-    fontSize: "xx-large",
-    border: "solid 2px black",
-    background: "#10113b",
-  },
   climaContainer: {
     display: "flex",
     justifyContent: "flex-start",
@@ -98,7 +81,6 @@ function RecepcionApiDesdeClima({ data, setData, error, setError }) {
           grafTempXHora={grafTempXHora}
           setGrafTempXHora={setGrafTempXHora}
         />
-
         <AspectosDestacados
           uv={uv}
           setUv={setUv}

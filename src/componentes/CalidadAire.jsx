@@ -7,12 +7,6 @@ const estilos = {
       fontSize: "medium",
       textAlign: "center",
     },
-    span: {
-      fontSize: "x-large",
-      color: "rgb(39 41 209)",
-      fontWeight: "bolder",
-      fontFamily: "emoji",
-    },
     span2: {
       fontSize: "large",
       fontWeight: "bolder",

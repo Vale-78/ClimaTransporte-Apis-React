@@ -18,18 +18,9 @@ const estilos = {
     fontSize: "large",
     fontWeight: "bolder",
   },
-  span3: {
-    fontSize: "large",
-    fontWeight: "bolder",
-  },
-  span4: {
-    fontSize: "large",
-    fontWeight: "bolder",
-    color: "rgb(39 41 209)",
-  },
 };
 
-function IndiceUV({uv, setUv}) {
+function IndiceUV({ uv, setUv }) {
   return (
     <div className="grid-item" style={estilos.grilla}>
       <br></br>

@@ -1,6 +1,7 @@
 import cielo3 from "../assets/cielo3.jpg";
 import { useState, useEffect } from "react";
 import { RecepcionApiDesdeClima } from "./RecepcionApiDesdeClima";
+import {CircularWithValueLabel} from "./CircularProgressWithLabel";
 const estilos = {
   fondoClima: {
     backgroundImage: `url(${cielo3})`,
@@ -18,23 +19,8 @@ const estilos = {
     border: "solid 2px black",
     background: "#10113b",
   },
-  climaContainer: {
-    display: "flex",
-    justifyContent: "flex-start",
-    paddingRight: "3px",
-  },
-  climaLeft: {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-evenly",
-  },
-  climaRight: {
-    display: "flex",
-    flexDirection: "column",
-  },
 };
 
-// https://api.open-meteo.com/v1/forecast?latitude=-31.4135&longitude=-64.181&hourly=temperature_2m,relativehumidity_2m,visibility&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max,windspeed_10m_max&current_weather=true&timezone=America%2FSao_Paulo&forecast_days=1
 function Clima() {
   const [data, setData] = useState({});
   const [error, setError] = useState(null);
@@ -71,7 +57,9 @@ function Clima() {
         ) : (
           <pre>
             {" "}
-            {loading && <h1>loading...</h1>}
+            {loading && 
+            <div><h1>Cargando...</h1>
+            <CircularWithValueLabel/></div>}
             {!loading && RecepcionApiDesdeClima && (
               <RecepcionApiDesdeClima
                 data={data}
