@@ -27,12 +27,12 @@ function SalidaPuestaSol({salidaYPuestaSol, setSalidaYPuestaSol}) {
         <span style={estilos.span2}>Salida del sol</span>
               <br></br>
               <span style={estilos.span4}>🌅</span>
-              <span style={estilos.span4}>6:35 AM</span>
+              <span style={estilos.span4}>{salidaYPuestaSol.min}</span>
               <br></br>
               <span style={estilos.span2}>Puesta del sol</span>
               <br></br>
               <span style={estilos.span4}>🌄</span>
-              <span style={estilos.span4}>7:22PM</span>
+              <span style={estilos.span4}>{salidaYPuestaSol.max}</span>
               <br></br>
               <br></br>
         </div>

@@ -1,6 +1,7 @@
 import './App.css';
 import {Clima} from "./componentes/Clima";
 import { Transporte } from './componentes/Transporte';
+
 const estilos = {
   header: {
     justifyContent: "space-evenly",
@@ -12,6 +13,7 @@ const estilos = {
   },
 };
 function App() {
+  // const mediaQueri= useMediaQuery( '(max-width: 700px)')
   return (
       <header className="contenedorGeneral" style={estilos.header}>
       <div style={estilos.contenedorGeneral}>

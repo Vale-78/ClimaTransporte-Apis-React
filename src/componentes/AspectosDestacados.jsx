@@ -24,23 +24,39 @@ const estilos = {
   },
 };
 
-function AspectosDestacados({uv, setUv , windStatus, setWindStatus,
-  salidaYPuestaSol, setSalidaYPuestaSol,humedad, setHumedad,
-visibilidad, setVisibilidad, calidadDelAire, setCalidadDelAire}) {
+function AspectosDestacados({
+  uv,
+  setUv,
+  windStatus,
+  setWindStatus,
+  salidaYPuestaSol,
+  setSalidaYPuestaSol,
+  humedad,
+  setHumedad,
+  visibilidad,
+  setVisibilidad,
+  calidadDelAire,
+  setCalidadDelAire,
+}) {
   return (
     <div>
       <h1 style={estilos.title}>AspectosDestacados</h1>
       <div style={estilos.container}>
-
-      
-       
-    
-        <EstadoViento  windStatus={windStatus} setWindStatus={setWindStatus} />
-        <IndiceUV uv={uv} setUv ={setUv} />
-        <SalidaPuestaSol salidaPuestaSol={salidaYPuestaSol} setSalidaPuestaSol={setSalidaYPuestaSol} />
-        <Humedad humedad={humedad} setHumedad={setHumedad}/>
-        <Visibilidad visibilidad={visibilidad} setVisibilidad={setVisibilidad} />
-        <CalidadAire calidadDelAire={calidadDelAire} setCalidadDelAire={setCalidadDelAire}/>
+        <EstadoViento windStatus={windStatus} setWindStatus={setWindStatus} />
+        <IndiceUV uv={uv} setUv={setUv} />
+        <SalidaPuestaSol
+          salidaYPuestaSol={salidaYPuestaSol}
+          setSalidaYPuestaSol={setSalidaYPuestaSol}
+        />
+        <Humedad humedad={humedad} setHumedad={setHumedad} />
+        <Visibilidad
+          visibilidad={visibilidad}
+          setVisibilidad={setVisibilidad}
+        />
+        <CalidadAire
+          calidadDelAire={calidadDelAire}
+          setCalidadDelAire={setCalidadDelAire}
+        />
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import { ProgresPrueba } from "./ProgresPrueba";
 import transporte2 from "../assets/transporte2.jpg";
+
 const estilos = { 
     fondoTransporte:{
         backgroundImage: `url(${transporte2})`,
@@ -24,7 +25,12 @@ const estilos = {
       textAlign: "center",
       fontSize:"x-large",
     },
+    // @media screen and (maxWidth:"700px"){
+
+    // }
+   
   };
+ 
 
 function Transporte() {
   return (

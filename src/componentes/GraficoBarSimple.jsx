@@ -15,7 +15,6 @@ const estilos = {
 };
 
 function GraficoBarSimple({grafTempXHora, setGrafTempXHora}) {
-  console.log(grafTempXHora);
   return (
     <div style={estilos.minMax}>
       <BarChart

@@ -48,6 +48,7 @@ CircularProgressWithLabel.propTypes = {
 
 function CircularDetConNumeros({uv, setUv}) {
 
+
   return (
     <CircularProgressWithLabel value={uv} />
   );
