@@ -43,10 +43,8 @@ function Clima() {
         setError(error);
       }
     }
-
     obtenerDatosDeAPI();
   }, []);
-
   //El segundo argumento [] asegura que la solicitud se realice una vez cuando se monta el componente.
   return (
     <section className="clima" style={estilos.fondoClima}>
