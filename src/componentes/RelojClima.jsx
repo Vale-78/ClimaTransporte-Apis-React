@@ -21,7 +21,7 @@ const estilos = {
   },
 };
 
-function RelojClima({calidadDelAire,tempActual, setTempActual, fecha, setFecha}) {
+function RelojClima({calidadDelAire,tempActual, setTempActual, fecha}) {
     let fechaConFormato = fecha.toString().split("T");
   const weatherCodeInfo = {
     0 : {

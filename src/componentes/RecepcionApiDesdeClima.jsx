@@ -51,11 +51,12 @@ function RecepcionApiDesdeClima({ data, setData, error, setError }) {
   });
 
   const [humedad, setHumedad] = useState(
-    data["hourly"]["relativehumidity_2m"]["11"]
+    data["hourly"]["relativehumidity_2m"][data["hourly"]["time"].indexOf(data["current_weather"]["time"].slice(0,13) + ":00")]
   );
+  
 
   const [visibilidad, setVisibilidad] = useState(
-    data["hourly"]["visibility"]["11"]
+    data["hourly"]["visibility"][data["hourly"]["time"].indexOf(data["current_weather"]["time"].slice(0,13) + ":00")]
   );
   const [calidadDelAire, setCalidadDelAire] = useState(
     data["current_weather"]["weathercode"]
