@@ -22,6 +22,7 @@ const estilos = {
 };
 
 function RelojClima({calidadDelAire,tempActual, setTempActual, fecha, setFecha}) {
+    let fechaConFormato = fecha.toString().split("T");
   const weatherCodeInfo = {
     0 : {
         "name": "despejado",
@@ -143,7 +144,7 @@ function RelojClima({calidadDelAire,tempActual, setTempActual, fecha, setFecha})
         <img src={relojClima2} alt="Reloj de clima" />
       </div>
       <br></br>
-      <span style={estilos.span2}>{fecha}</span>
+      <span style={estilos.span2}>{fechaConFormato[0]} , {fechaConFormato[1]}</span>
       <br></br>
       <br></br>
       <Temperatura tempActual={tempActual} setTempActual={setTempActual}/>
