@@ -1,5 +1,5 @@
-import { ProgresPrueba } from "./ProgresPrueba";
 import transporte2 from "../assets/transporte2.jpg";
+import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet'
 
 const estilos = { 
     fondoTransporte:{
@@ -7,7 +7,7 @@ const estilos = {
         backgroundRepeat: "no-repeat",
         minWidth:"100%,",
         display:"flex",
-        flexDirection: "column"
+        flexDirection: "column",
       }, 
     titleTransporte: {
       fontFamily: "-apple-system",
@@ -33,24 +33,27 @@ const estilos = {
  
 
 function Transporte() {
+  const position = [51.505, -0.09]
   return (
     <section className='transporte' style={estilos.fondoTransporte}>
     <h1 style={estilos.titleTransporte}>
      TRANSPORTE
    </h1>
    <p style={estilos.p}>
-     Práximamente, info sobre transporte!
+     La info que buscás, aquí la encontrarás!!
    </p>
-   <p style={estilos.p}>
-     Práximamente, info sobre transporte!
-   </p>
-   <p style={estilos.p}>
-     Práximamente, info sobre transporte!
-   </p>
-   <p style={estilos.p}>
-     Práximamente, info sobre transporte! Práximamente, info sobre transporte!
-   </p>
-   <ProgresPrueba/>
+   <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
+    <TileLayer
+      attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+    />
+    <Marker position={position}>
+      <Popup>
+        A pretty CSS3 popup. <br /> Easily customizable.
+      </Popup>
+    </Marker>
+  </MapContainer>
+
     </section>
   );
 }
