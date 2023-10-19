@@ -16,8 +16,8 @@ const estilos = {
 function App() {
   // const mediaQueri= useMediaQuery( '(max-width: 700px)')
   return (
-      <header className="contenedorGeneral" style={estilos.header}>
-      <div style={estilos.contenedorGeneral}>
+      <header  className="containerGeneral" style={estilos.header}>
+      <div id="containerDiv" style={estilos.contenedorGeneral}>
           <Clima/>
           <Transporte/>
         </div>
