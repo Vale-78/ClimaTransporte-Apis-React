@@ -22,6 +22,7 @@ function App() {
           <Clima/>
           {/* <Transporte/> */}
           <TransporteApi/>
+          {/* <TransporteApi_copy/> */}
         </div>
       </header>
   );

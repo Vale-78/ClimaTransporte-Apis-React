@@ -26,11 +26,12 @@ const icon = new Icon({
   iconSize: [25, 25],
 });
 
-function Maps({ dataTransp, setDataTransp, error, setError }) {
+function Maps({ dataTransp, setDataTransp, error, setError, agency_id, setAgency_id}) {
   // const [position, setPosition]=useState([dataTransp[0]]);
 
+    // const position = [dataTransp[0]["latitude"], dataTransp[0]["longitude"]];
     const position = [dataTransp[0]["latitude"], dataTransp[0]["longitude"]];
-
+    const agencia = [dataTransp["agencia_id"]];
   return (
     <div>
       <p style={estilos.p}>{position}</p>
@@ -45,7 +46,7 @@ function Maps({ dataTransp, setDataTransp, error, setError }) {
             position={[dataTransp[index]["latitude"], dataTransp[index]["longitude"]]}
             icon={icon}
               >
-              <Popup>{[dataTransp[index]["agency_name"]]}<br/> {[dataTransp[index]["trip_headsign"]] }<br/></Popup>
+              <Popup>{[dataTransp[index]["agency_name"]]}<br/> {[dataTransp[index]["trip_headsign"]] }{agencia}<br/></Popup>
           </Marker>
             )
           })}
