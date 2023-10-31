@@ -43,16 +43,16 @@ const estilos = {
   // }
 };
 
-function TraAgency({agency_id, setAgency_id}) {
+function TraAgency({agencyId, setAgencyId}) {
   const [dataTransp, setDataTransp] = useState({});
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
    
-    async function obtenerDatosDeAPITransp() {
+    async function obtenerDatosDeAPITransp(agencyId) {
       try {
         const respuesta = await fetch(
-          `https://apitransporte.buenosaires.gob.ar/colectivos/vehiclePositionsSimple? agency_id=${agency_id}&client_id=cb6b18c84b3b484d98018a791577af52&client_secret=3e3DB105Fbf642Bf88d5eeB8783EE1E6`
+          `https://apitransporte.buenosaires.gob.ar/colectivos/vehiclePositionsSimple?agency_id=${agencyId}&client_id=cb6b18c84b3b484d98018a791577af52&client_secret=3e3DB105Fbf642Bf88d5eeB8783EE1E6`
           );
         if (!respuesta.ok) {
           throw new Error("No se puede obtener respuesta de la API");
@@ -67,12 +67,12 @@ function TraAgency({agency_id, setAgency_id}) {
       }
     }
     const interval = setInterval(() => {
-       obtenerDatosDeAPITransp(agency_id);
+       obtenerDatosDeAPITransp(agencyId);
      }
     , 31000); 
     
     return () => clearInterval(interval)
-  }, []);
+  }, [agencyId]);
   //El segundo argumento [] asegura que la solicitud se realice una vez cuando se monta el componente.
   return (
     <section className="transporte" style={estilos.fondoTransporte}>
@@ -94,8 +94,8 @@ function TraAgency({agency_id, setAgency_id}) {
                   setDataTransp={setDataTransp}
                   error={error}
                   setError={setError}
-                  agency_id= {agency_id} 
-                  setAgency_id={setAgency_id}
+                  agencyId= {agencyId} 
+                  setAgencyId={setAgencyId}
                 />           
             )}
           </pre>
@@ -106,12 +106,12 @@ function TraAgency({agency_id, setAgency_id}) {
 }
 export { TraAgency };
 
-// <option key={1} value={[dataTransp["agency_id"][82]]}>MICROOMNIBUS SAAVEDRA S.A.T.A.C.I.</option>
-// <option key={2} value={[dataTransp["agency_id"][72]]}>MICRO OMNIBUS QUILMES S.A.C.I. Y F.</option>
-// <option key={4} value={[dataTransp["agency_id"][14]]}>TRANSP. AUTOMOTORES 12 DE OCTUBRE S.A.C.</option>
-// <option key={5} value={[dataTransp["agency_id"][63]]}>EL NUEVO HALCON S.A.</option>
-// <option key={6} value={[dataTransp["agency_id"][20]]}>EMPRESA TANDILENSE S.A.C.I.F.I.Y DE S.</option>
-// <option key={7} value={[dataTransp["agency_id"][430]]}>ERSA URBANO</option>
-// <option key={8} value={[dataTransp["agency_id"][6]]}>TRANSPORTES AUTOMOTORES CALLAO S.A.</option>
+// <option key={1} value={[dataTransp["agencyId"][82]]}>MICROOMNIBUS SAAVEDRA S.A.T.A.C.I.</option>
+// <option key={2} value={[dataTransp["agencyId"][72]]}>MICRO OMNIBUS QUILMES S.A.C.I. Y F.</option>
+// <option key={4} value={[dataTransp["agencyId"][14]]}>TRANSP. AUTOMOTORES 12 DE OCTUBRE S.A.C.</option>
+// <option key={5} value={[dataTransp["agencyId"][63]]}>EL NUEVO HALCON S.A.</option>
+// <option key={6} value={[dataTransp["agencyId"][20]]}>EMPRESA TANDILENSE S.A.C.I.F.I.Y DE S.</option>
+// <option key={7} value={[dataTransp["agencyId"][430]]}>ERSA URBANO</option>
+// <option key={8} value={[dataTransp["agencyId"][6]]}>TRANSPORTES AUTOMOTORES CALLAO S.A.</option>
 
 

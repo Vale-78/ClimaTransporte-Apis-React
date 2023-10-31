@@ -1,7 +1,8 @@
 import './App.css';
 import {Clima} from "./componentes/Clima";
 // import { Transporte } from './componentes/Transporte';
-import { TransporteApi } from './componentes/TransporteApi';
+ import { TransporteApi } from './componentes/TransporteApi';
+// import { TransporteApiCopy } from './componentes/TransporteApiCopy';
 
 const estilos = {
   header: {
@@ -22,7 +23,7 @@ function App() {
           <Clima/>
           {/* <Transporte/> */}
           <TransporteApi/>
-          {/* <TransporteApi_copy/> */}
+          {/* <TransporteApiCopy/>  */}
         </div>
       </header>
   );

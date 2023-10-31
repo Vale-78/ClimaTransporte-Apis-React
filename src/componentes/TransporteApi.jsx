@@ -41,7 +41,7 @@ const estilos = {
 };
 
 function TransporteApi() {
-  const [agency_id, setAgency_id] = useState([]);
+  const [agencyId, setAgencyId] = useState(82);
   // const [route_short_name, setRoute_short_name] = useState("");
   // const [route_id, setRoute_id] = useState("");
   // const ruteShortNameToRouteId= {
@@ -76,7 +76,7 @@ function TransporteApi() {
       </p>
       <div></div>
       <div>
-        <select defaultValue={""} onChange={(e) => setAgency_id(e.target.value)}>
+        <select defaultValue={""} onChange={(e) => setAgencyId(e.target.value)}>
           <option key={0}>Empresas Disponibles</option>
           <option key={1} value={82}>
           MICROOMNIBUS SAAVEDRA S.A.T.A.C.I.
@@ -101,8 +101,8 @@ function TransporteApi() {
           </option>
         </select>
        
-        <p style={estilos.p}>Empresa: {agency_id}</p>
-        <TraAgency agency_id= {agency_id} setAgency_id={setAgency_id}/>
+        <p style={estilos.p}>Empresa: {agencyId}</p>
+        <TraAgency agencyId={agencyId} setAgencyId={setAgencyId}/>
       </div>
     </section>
   );
