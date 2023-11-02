@@ -75,7 +75,6 @@ function TraAgency({agencyId, setAgencyId}) {
   }, [agencyId]);
   //El segundo argumento [] asegura que la solicitud se realice una vez cuando se monta el componente.
   return (
-    <section className="transporte" style={estilos.fondoTransporte}>
       <div>
         {error ? (
           <p style={estilos.p}>Error al obtener datos de la Api: {error.message}</p>
@@ -101,7 +100,7 @@ function TraAgency({agencyId, setAgencyId}) {
           </pre>
         )}
       </div>
-    </section>
+  
   );
 }
 export { TraAgency };

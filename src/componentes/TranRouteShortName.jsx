@@ -2,9 +2,9 @@
 // CON Api
 
 import transporte2 from "../assets/transporte2.jpg";
-import { Maps } from "./Maps";
-import { useState, useEffect } from "react";
-import { CircularWithValueLabel } from "./CircularProgressWithLabel";
+// import { Maps } from "./Maps";
+// import { useState, useEffect } from "react";
+// import { CircularWithValueLabel } from "./CircularProgressWithLabel";
 
 
 const estilos = {
@@ -43,47 +43,48 @@ const estilos = {
   // }
 };
 
-function TraAgency() {
-  const [dataTransp, setDataTransp] = useState({});
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [route_id, setRoute_id] = useState("") ;
-  const [agency_id, setAgency_id] = useState(["6", "14", "20", "63", "72" , "82", "430"]);
-  const [route_short_name, setRoute_short_name] = useState("");
-  useEffect(() => {
-   
-    async function obtenerDatosDeAPITransp() {
-      try {
-        const respuesta = await fetch(
-          `https://apitransporte.buenosaires.gob.ar/colectivos/vehiclePositionsSimple? route_id=${route_id}& agency_id=${agency_id}& route_short_name =${route_short_name}&client_id=cb6b18c84b3b484d98018a791577af52&client_secret=3e3DB105Fbf642Bf88d5eeB8783EE1E6`
-        );
-        if (!respuesta.ok) {
-          throw new Error("No se puedo obtener respuesta de la API");
-        }
-
-        const datos = await respuesta.json();
-        setDataTransp(datos);
-        setLoading(false);
-        setRoute_id(datos)
-        setRoute_short_name(datos)
-        setAgency_id(datos)
-      } catch (error) {
-        setError(error);
-      }
-    }
-    const interval = setInterval(() => {
-       obtenerDatosDeAPITransp();
-     }
-    , 31000); 
-    
-    return () => clearInterval(interval)
-  }, []);
-  //El segundo argumento [] asegura que la solicitud se realice una vez cuando se monta el componente.
+function TranRouteShortName() {
  
-  const infoAgencias= dataTransp["agency_id"];
+  // const [dataTransp, setDataTransp] = useState({});
+  // const [error, setError] = useState(null);
+  // const [loading, setLoading] = useState(true);
+  // const [route_id, setRoute_id] = useState("") ;
+  // const [route_short_name, setRoute_short_name] = useState("");
+  // useEffect(() => {
+   
+  //   async function obtenerDatosDeAPITransp() {
+  //     try {
+  //       const respuesta = await fetch(
+  //         `https://apitransporte.buenosaires.gob.ar/colectivos/vehiclePositionsSimple? route_id=${route_id}& route_short_name =${route_short_name}&client_id=cb6b18c84b3b484d98018a791577af52&client_secret=3e3DB105Fbf642Bf88d5eeB8783EE1E6`
+  //       );
+  //       if (!respuesta.ok) {
+  //         throw new Error("No se puedo obtener respuesta de la API");
+  //       }
+
+  //       const datos = await respuesta.json();
+  //       setDataTransp(datos);
+  //       setLoading(false);
+  //       setRoute_id(datos)
+  //       setRoute_short_name(datos)
+  //       setAgency_id(datos)
+  //     } catch (error) {
+  //       setError(error);
+  //     }
+  //   }
+  //   const interval = setInterval(() => {
+  //      obtenerDatosDeAPITransp();
+  //    }
+  //   , 31000); 
+    
+  //   return () => clearInterval(interval)
+  // }, [route_id]);
+  // //El segundo argumento [] asegura que la solicitud se realice una vez cuando se monta el componente.
+ 
+  // const infoAgencias= dataTransp["agency_id"];
   return (
-    <section className="transporte" style={estilos.fondoTransporte}>
-    <h1 style={estilos.titleTransporte}>
+    <div >
+    <p style={estilos.p}> TransRouteShort </p>
+    {/* <h1 style={estilos.titleTransporte}>
      TRANSPORTE
    </h1>
    <p style={estilos.p}>La info que buscás, aquí la encontrarás!!<br/>Colectivos de la ciudad de Bs As</p>
@@ -126,11 +127,11 @@ function TraAgency() {
             )}
           </pre>
         )}
-      </div>
-    </section>
+      </div> */}
+    </div>
   );
 }
-export { TraAgency };
+export { TranRouteShortName };
 
 // <option key={1} value={[dataTransp["agency_id"][82]]}>MICROOMNIBUS SAAVEDRA S.A.T.A.C.I.</option>
 // <option key={2} value={[dataTransp["agency_id"][72]]}>MICRO OMNIBUS QUILMES S.A.C.I. Y F.</option>
