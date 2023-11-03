@@ -1,8 +1,4 @@
-import { useState } from "react";
-
 const estilos = {
- 
-
     p: {
       fontFamily: "-apple-system",
       color: "white",
@@ -10,23 +6,36 @@ const estilos = {
       textAlign: "center",
       fontSize: "x-large",
     },
+    selectContainer: {
+      fontFamily: "-apple-system",
+      color: "black",
+      fontWeight: "bolder",
+      textAlign: "center",
+      fontSize:"large",
+    },
+    container: {
+      alignItems: "center",
+      display: "flex",
+      flexDirection: "column"
+    },
   };
   
   
-function SeleccionBusquedaTra({desbloqSelected}) {
+function SeleccionBusquedaTra({desbloqSelected, setDesbloqSelected, seleccion, setSeleccion}) {
    
     function iniciarBúsqueda(e) {
         setSeleccion(e.target.value);
-        desbloqSelected(1);
+        setDesbloqSelected(!desbloqSelected);
+
       }
-    const [seleccion, setSeleccion] = useState("Buscar por Linea")
+    
   return (
-    <div>
-    <select defaultValue={""} onChange= {iniciarBúsqueda}>
-      <option key={1} value={"Buscar por Linea"}>
+    <div style={estilos.selectContainer}>
+    <select style={estilos.selectContainer} defaultValue={""} onChange= {iniciarBúsqueda}>
+      <option key={0} value={0}>
       Buscar por línea
       </option>
-      <option key={2} value={"Buscar por Empresa"}>
+      <option key={1} value={1}>
       Buscar por empresa
       </option>      
     </select>
