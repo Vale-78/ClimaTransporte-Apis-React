@@ -20,13 +20,13 @@ const estilos = {
   },
 };
 
-// https://api.open-meteo.com/v1/forecast?latitude=-31.4135&longitude=-64.181&hourly=temperature_2m,relativehumidity_2m,visibility&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max,windspeed_10m_max&current_weather=true&timezone=America%2FSao_Paulo&forecast_days=1
+// https://api.open-meteo.com/v1/forecast?latitude=-31.4135&longitude=-64.181&hourly=temperature_2m,relativehumidity_2m,visibility&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max,windspeed_10m_max&current=true&timezone=America%2FSao_Paulo&forecast_days=1
 function RecepcionApiDesdeClima({ data, setData, error, setError }) {
 
   const [tempActual, setTempActual] = useState(
-    data["current_weather"]["temperature"]
+    data["current"]["temperature_2m"]
   );
-  const [fecha, setFecha] = useState(data["current_weather"]["time"]);
+  const [fecha, setFecha] = useState(data["current"]["time"]);
   const [tempMinMax, setTempMinMax] = useState({
     min: data["daily"]["temperature_2m_min"],
     max: data["daily"]["temperature_2m_max"],
@@ -49,15 +49,15 @@ function RecepcionApiDesdeClima({ data, setData, error, setError }) {
   });
 
   const [humedad, setHumedad] = useState(
-    data["hourly"]["relativehumidity_2m"][data["hourly"]["time"].indexOf(data["current_weather"]["time"].slice(0,13) + ":00")]
+    data["hourly"]["relative_humidity_2m"][data["hourly"]["time"].indexOf(data["current"]["time"].slice(0,13) + ":00")]
   );
   
 
   const [visibilidad, setVisibilidad] = useState(
-    data["hourly"]["visibility"][data["hourly"]["time"].indexOf(data["current_weather"]["time"].slice(0,13) + ":00")]
+    data["hourly"]["visibility"][data["hourly"]["time"].indexOf(data["current"]["time"].slice(0,13) + ":00")]
   );
   const [calidadDelAire, setCalidadDelAire] = useState(
-    data["current_weather"]["weathercode"]
+    data["current"]["weather_code"]
   );
 
   //El segundo argumento [] asegura que la solicitud se realice una vez cuando se monta el componente.

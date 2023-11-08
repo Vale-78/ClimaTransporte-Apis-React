@@ -48,7 +48,7 @@ function TranRouteShortName({ routeId, setRouteId }) {
     }
     const interval = setInterval(() => {
       obtenerDatosDeAPITransp(routeId);
-    }, 31000);
+    }, 15000);
 
     return () => clearInterval(interval);
   }, [routeId]);
