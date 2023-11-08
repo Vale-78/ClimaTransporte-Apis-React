@@ -3,16 +3,46 @@ import { Hoy } from "../componentes/Hoy";
 import { MinMax } from "../componentes/MinMax";
 import { RelojClima } from "../componentes/RelojClima";
 import { useState } from "react";
+import cielo3 from "../assets/cielo3.jpg";
+import cieloNoche from "../assets/cieloNoche.jpg";
+
+
+const estilosDia = {
+   backgroundImage: `url(${cielo3})`,
+   backgroundRepeat: "no-repeat",
+   maxWidth: "100%",
+   display: "flex",
+   flexDirection: "column"
+}
+const estilosNoche = {
+   backgroundImage: `url(${cieloNoche})`,
+   backgroundRepeat: "no-repeat",
+   maxWidth: "100%",
+   display: "flex",
+   flexDirection: "column",
+}
+
 const estilos = {
+   titleClima: {
+    fontFamily: "-apple-system",
+    color: "white",
+    fontWeight: "bolder",
+    textAlign: "center",
+    fontSize: "xx-large",
+    border: "solid 2px black",
+    background: "#10113b",
+  },
   climaContainer: {
     display: "flex",
     justifyContent: "flex-start",
     paddingRight: "3px",
+    paddingTop: "0px"
   },
   climaLeft: {
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-evenly",
+    paddingTop: "0px"
   },
   climaRight: {
     display: "flex",
@@ -20,8 +50,19 @@ const estilos = {
   },
 };
 
-// https://api.open-meteo.com/v1/forecast?latitude=-31.4135&longitude=-64.181&hourly=temperature_2m,relativehumidity_2m,visibility&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max,windspeed_10m_max&current=true&timezone=America%2FSao_Paulo&forecast_days=1
-function RecepcionApiDesdeClima({ data, setData, error, setError }) {
+function RecepcionApiDesdeClima({ data }) {
+  const [esDia, setEsDia] = useState(data["current"]["is_day"]);
+  
+  console.log(esDia)
+  const cambiarDiaNoche= () => {
+    if (esDia===0){
+      return estilosDia
+    } else if(esDia===1) {
+      return estilosNoche
+    }
+  }  
+  const diaONoche= cambiarDiaNoche()
+console.log(cambiarDiaNoche())
 
   const [tempActual, setTempActual] = useState(
     data["current"]["temperature_2m"]
@@ -62,6 +103,9 @@ function RecepcionApiDesdeClima({ data, setData, error, setError }) {
 
   //El segundo argumento [] asegura que la solicitud se realice una vez cuando se monta el componente.
   return (
+  
+    <section className="clima" style={diaONoche}>
+      <h1 style={estilos.titleClima}>CLIMA</h1>
     <div className="climaContainer" style={estilos.climaContainer}>
       <div className="climaLeft" style={estilos.climaLeft}>
         <RelojClima
@@ -71,6 +115,8 @@ function RecepcionApiDesdeClima({ data, setData, error, setError }) {
           setFecha={setFecha}
           calidadDelAire={calidadDelAire}
           setCalidadDelAire={setCalidadDelAire}
+          esDia={esDia}
+          setEsDia={setEsDia}
         />
         <br></br>
         <MinMax tempMinMax={tempMinMax} setTempMinMax={setTempMinMax} />
@@ -96,6 +142,7 @@ function RecepcionApiDesdeClima({ data, setData, error, setError }) {
         />
       </div>
     </div>
+    </section>
   );
 }
 export { RecepcionApiDesdeClima };

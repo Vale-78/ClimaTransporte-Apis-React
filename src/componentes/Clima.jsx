@@ -1,24 +1,11 @@
-import cielo3 from "../assets/cielo3.jpg";
 import { useState, useEffect } from "react";
 import { RecepcionApiDesdeClima } from "./RecepcionApiDesdeClima";
 import {CircularWithValueLabel} from "./CircularProgressWithLabel";
+
 const estilos = {
-  fondoClima: {
-    backgroundImage: `url(${cielo3})`,
-    backgroundRepeat: "no-repeat",
-    maxWidth: "100%",
-    display: "flex",
-    flexDirection: "column",
-  },
-  titleClima: {
-    fontFamily: "-apple-system",
-    color: "white",
-    fontWeight: "bolder",
-    textAlign: "center",
-    fontSize: "xx-large",
-    border: "solid 2px black",
-    background: "#10113b",
-  },
+ container: {
+   margin: "0px"
+ },
 };
 
 function Clima() {
@@ -47,13 +34,12 @@ function Clima() {
   }, []);
   //El segundo argumento [] asegura que la solicitud se realice una vez cuando se monta el componente.
   return (
-    <section className="clima" style={estilos.fondoClima}>
-      <h1 style={estilos.titleClima}>CLIMA</h1>
-      <div>
+    
+      <div style={estilos.container}>
         {error ? (
           <p>Error al obtener datos de la Api:{error.message}</p>
         ) : (
-          <pre>
+          <pre style={estilos.container}>
             {" "}
             {loading && 
             <div><h1>Cargando...</h1>
@@ -69,7 +55,7 @@ function Clima() {
           </pre>
         )}
       </div>
-    </section>
+   
   );
 }
 export { Clima };
