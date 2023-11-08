@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import { RecepcionApiDesdeClima } from "./RecepcionApiDesdeClima";
-import {CircularWithValueLabel} from "./CircularProgressWithLabel";
+import { CircularWithValueLabel } from "./CircularProgressWithLabel";
 
 const estilos = {
- container: {
-   margin: "0px"
- },
+  container: {
+    margin: "0px",
+  },
 };
 
 function Clima() {
@@ -34,28 +34,29 @@ function Clima() {
   }, []);
   //El segundo argumento [] asegura que la solicitud se realice una vez cuando se monta el componente.
   return (
-    
-      <div style={estilos.container}>
-        {error ? (
-          <p>Error al obtener datos de la Api:{error.message}</p>
-        ) : (
-          <pre style={estilos.container}>
-            {" "}
-            {loading && 
-            <div><h1>Cargando...</h1>
-            <CircularWithValueLabel/></div>}
-            {!loading && RecepcionApiDesdeClima && (
-              <RecepcionApiDesdeClima
-                data={data}
-                setData={setData}
-                error={error}
-                setError={setError}
-              />
-            )}
-          </pre>
-        )}
-      </div>
-   
+    <div style={estilos.container}>
+      {error ? (
+        <p>Error al obtener datos de la Api:{error.message}</p>
+      ) : (
+        <pre style={estilos.container}>
+          {" "}
+          {loading && (
+            <div>
+              <h1>Cargando...</h1>
+              <CircularWithValueLabel />
+            </div>
+          )}
+          {!loading && RecepcionApiDesdeClima && (
+            <RecepcionApiDesdeClima
+              data={data}
+              setData={setData}
+              error={error}
+              setError={setError}
+            />
+          )}
+        </pre>
+      )}
+    </div>
   );
 }
 export { Clima };
