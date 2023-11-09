@@ -5,10 +5,10 @@ import { TranRouteShortName} from "./TranRouteShortName";
 const estilos = {
   selectContainer: {
     fontFamily: "-apple-system",
-    color: "black",
+    color: "#3f4089",
     fontWeight: "bolder",
     textAlign: "center",
-    fontSize:"medium",
+    fontSize:"large",
   },
   container: {
     alignItems: "center",
