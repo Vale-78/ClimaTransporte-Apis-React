@@ -8,16 +8,19 @@ const estilos = {
   },
 };
 
-function Clima() {
+function Clima({ubiLatitude, setUbiLatitude, ubiLongitude, setUbiLongitude}) {
+  
   const [data, setData] = useState({});
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
+  console.log(ubiLatitude)
+  console.log(ubiLongitude)
 
   useEffect(() => {
-    async function obtenerDatosDeAPI() {
+    async function obtenerDatosDeAPI(ubiLatitude, ubiLongitude) {
       try {
         const respuesta = await fetch(
-          "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,weather_code&hourly=temperature_2m,relative_humidity_2m,visibility&daily=weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max,wind_speed_10m_max&forecast_days=1"
+          `https://api.open-meteo.com/v1/forecast?latitude=${ubiLatitude}&longitude=${ubiLongitude}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,weather_code&hourly=temperature_2m,relative_humidity_2m,visibility&daily=weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max,wind_speed_10m_max&forecast_days=1`
         );
         if (!respuesta.ok) {
           throw new Error("No se puedo obtener respuesta de la API");
@@ -30,8 +33,8 @@ function Clima() {
         setError(error);
       }
     }
-    obtenerDatosDeAPI();
-  }, []);
+    obtenerDatosDeAPI(ubiLatitude, ubiLongitude);
+  }, [ubiLatitude,ubiLongitude]);
   //El segundo argumento [] asegura que la solicitud se realice una vez cuando se monta el componente.
   return (
     <div style={estilos.container}>

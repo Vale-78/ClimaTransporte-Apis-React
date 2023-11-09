@@ -2,6 +2,8 @@ import "./App.css";
 import { Clima } from "./componentes/Clima";
 // import { Transporte } from './componentes/Transporte';
 import { TransporteApi } from "./componentes/TransporteApi";
+import { useState } from "react";
+import {UbicacionActual} from "./componentes/UbicacionActual"
 
 const estilos = {
   header: {
@@ -15,11 +17,16 @@ const estilos = {
   },
 };
 function App() {
-  // const mediaQueri= useMediaQuery( '(max-width: 700px)')
+
+  const [ubiLatitude, setUbiLatitude] = useState(null);
+  const [ubiLongitude,  setUbiLongitude] = useState(null);
+ 
+
   return (
     <header className="containerGeneral" style={estilos.header}>
       <div id="containerDiv" style={estilos.contenedorGeneral}>
-        <Clima />
+      <UbicacionActual ubiLatitude={ubiLatitude} setUbiLatitude= {setUbiLatitude} ubiLongitude={ubiLongitude} setUbiLongitude={setUbiLongitude}/>
+        <Clima ubiLatitude={ubiLatitude} setUbiLatitude= {setUbiLatitude} ubiLongitude={ubiLongitude} setUbiLongitude={setUbiLongitude}/>
         {/* <Transporte/> */}
         <TransporteApi />
       </div>
