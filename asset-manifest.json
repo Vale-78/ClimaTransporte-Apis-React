@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "/ClimaTransporte-Apis-React/static/css/main.765b5dc7.css",
-    "main.js": "/ClimaTransporte-Apis-React/static/js/main.a944cbd6.js",
+    "main.js": "/ClimaTransporte-Apis-React/static/js/main.932c8333.js",
     "static/js/787.7f0deaa9.chunk.js": "/ClimaTransporte-Apis-React/static/js/787.7f0deaa9.chunk.js",
     "static/media/transporte2.jpg": "/ClimaTransporte-Apis-React/static/media/transporte2.4abc4748534cad3fa430.jpg",
     "static/media/cielo3.jpg": "/ClimaTransporte-Apis-React/static/media/cielo3.253fe5b2a49b11febd1d.jpg",
+    "static/media/cieloNoche.jpg": "/ClimaTransporte-Apis-React/static/media/cieloNoche.5ad394084cd55a0d38f8.jpg",
     "static/media/roboto-latin-500-normal.woff2": "/ClimaTransporte-Apis-React/static/media/roboto-latin-500-normal.f25d774ecfe0996f8eb5.woff2",
     "static/media/roboto-latin-700-normal.woff2": "/ClimaTransporte-Apis-React/static/media/roboto-latin-700-normal.227c93190fe7f82de3f8.woff2",
     "static/media/roboto-latin-400-normal.woff2": "/ClimaTransporte-Apis-React/static/media/roboto-latin-400-normal.b009a76ad6afe4ebd301.woff2",
@@ -64,11 +65,11 @@
     "static/media/roboto-greek-ext-700-normal.woff": "/ClimaTransporte-Apis-React/static/media/roboto-greek-ext-700-normal.249853776d22a271b2b5.woff",
     "index.html": "/ClimaTransporte-Apis-React/index.html",
     "main.765b5dc7.css.map": "/ClimaTransporte-Apis-React/static/css/main.765b5dc7.css.map",
-    "main.a944cbd6.js.map": "/ClimaTransporte-Apis-React/static/js/main.a944cbd6.js.map",
+    "main.932c8333.js.map": "/ClimaTransporte-Apis-React/static/js/main.932c8333.js.map",
     "787.7f0deaa9.chunk.js.map": "/ClimaTransporte-Apis-React/static/js/787.7f0deaa9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.765b5dc7.css",
-    "static/js/main.a944cbd6.js"
+    "static/js/main.932c8333.js"
   ]
 }
