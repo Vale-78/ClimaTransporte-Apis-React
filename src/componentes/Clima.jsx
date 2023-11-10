@@ -33,8 +33,14 @@ function Clima({ubiLatitude, setUbiLatitude, ubiLongitude, setUbiLongitude}) {
         setError(error);
       }
     }
-    obtenerDatosDeAPI(ubiLatitude, ubiLongitude);
+    const interval = setInterval(() => {
+      obtenerDatosDeAPI(ubiLatitude, ubiLongitude);
+    }, 31000);
+
+    return () => clearInterval(interval);
   }, [ubiLatitude,ubiLongitude]);
+  //El segundo arg
+    
   //El segundo argumento [] asegura que la solicitud se realice una vez cuando se monta el componente.
   return (
     <div style={estilos.container}>

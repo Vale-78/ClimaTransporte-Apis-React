@@ -2,8 +2,8 @@ import "./App.css";
 import { Clima } from "./componentes/Clima";
 // import { Transporte } from './componentes/Transporte';
 import { TransporteApi } from "./componentes/TransporteApi";
-import { useState } from "react";
-import {UbicacionActual} from "./componentes/UbicacionActual"
+import { useEffect, useState } from "react";
+import {ubicacionActual} from "./Servicios/ubicacionActual"
 
 const estilos = {
   header: {
@@ -20,12 +20,16 @@ function App() {
 
   const [ubiLatitude, setUbiLatitude] = useState(null);
   const [ubiLongitude,  setUbiLongitude] = useState(null);
+  useEffect(()=>{
+     ubicacionActual(ubiLatitude, setUbiLatitude, ubiLongitude, setUbiLongitude)
+
+  }, [])
  
 
   return (
     <header className="containerGeneral" style={estilos.header}>
       <div id="containerDiv" style={estilos.contenedorGeneral}>
-      <UbicacionActual ubiLatitude={ubiLatitude} setUbiLatitude= {setUbiLatitude} ubiLongitude={ubiLongitude} setUbiLongitude={setUbiLongitude}/>
+      
         <Clima ubiLatitude={ubiLatitude} setUbiLatitude= {setUbiLatitude} ubiLongitude={ubiLongitude} setUbiLongitude={setUbiLongitude}/>
         {/* <Transporte/> */}
         <TransporteApi />

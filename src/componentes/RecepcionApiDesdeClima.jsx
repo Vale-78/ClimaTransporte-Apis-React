@@ -54,9 +54,9 @@ function RecepcionApiDesdeClima({ data }) {
 
   console.log(esDia);
   const cambiarDiaNoche = () => {
-    if (esDia === 0) {
+    if (esDia === 1) {
       return estilosDia;
-    } else if (esDia === 1) {
+    } else if (esDia === 0) {
       return estilosNoche;
     }
   };
